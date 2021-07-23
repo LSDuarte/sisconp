@@ -6,7 +6,7 @@ import lombok.Data;
 public class Ocorrencia {
 
 	private Long id;
-	private String nomeOcorrencia;
+	private String nome;
 	private String descricao;
 
 }

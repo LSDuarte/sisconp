@@ -1,6 +1,6 @@
 package com.dio.sisconp.model;
 
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 
 import lombok.Data;
 
@@ -8,7 +8,7 @@ import lombok.Data;
 public class Localidade {
 
 	private Long id;
-	@OneToMany
+	@ManyToOne
 	private NivelAcesso nivelAcesso;
 	private String descricao;
 }

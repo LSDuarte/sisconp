@@ -6,7 +6,6 @@ import lombok.Data;
 public class TipoData {
 
 	private Long id;
-	private String Tipo;
 	private String descricao;
 
 }
