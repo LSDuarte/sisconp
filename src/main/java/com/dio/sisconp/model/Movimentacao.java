@@ -6,10 +6,14 @@ import java.time.LocalDateTime;
 
 import javax.persistence.Embeddable;
 import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import lombok.Data;
 
 @Data
+@Entity
 public class Movimentacao {
 
 	// chave composta em spring
@@ -22,11 +26,14 @@ public class Movimentacao {
 	}
 
 	// id composto da classe acima.
+	@Id
 	@EmbeddedId
 	private MovimentacaoId id;
 	private LocalDateTime dataEntrada;
 	private LocalDateTime dataSaida;
 	private BigDecimal periodo;
+	@ManyToOne
 	private Ocorrencia ocorrencia;
+	@ManyToOne
 	private Calendario calendario;
 }

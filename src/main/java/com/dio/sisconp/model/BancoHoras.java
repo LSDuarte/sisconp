@@ -6,10 +6,12 @@ import java.time.LocalDateTime;
 
 import javax.persistence.Embeddable;
 import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
 
 import lombok.Data;
 
 @Data
+@Entity
 public class BancoHoras {
 
 	@Data
