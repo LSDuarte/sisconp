@@ -1,5 +1,6 @@
 package com.dio.sisconp.model;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
@@ -11,8 +12,10 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Calendario {
-	
+public class Calendario implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;

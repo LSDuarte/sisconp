@@ -12,7 +12,9 @@ import lombok.Data;
 
 @Data
 @Entity
-public class BancoHoras {
+public class BancoHoras implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	@Data
 	@Embeddable

@@ -1,5 +1,6 @@
 package com.dio.sisconp.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -12,8 +13,10 @@ import javax.persistence.ManyToOne;
 import lombok.Data;
 
 @Data
-@Entity	
-public class Usuario {
+@Entity
+public class Usuario implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
